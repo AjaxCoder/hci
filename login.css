@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.background-design {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #2d2d2d 25%, #333333 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-design::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #666666 1px, transparent 1px), 
+                      radial-gradient(circle, #666666 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.background-design::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 255, 255, 0.2);
+    border-radius: 50%;
+    top: -50px;
+    right: -100px;
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.6);
+    z-index: 1;
+}
+
+.login-container {
+    max-width: 500px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.right{
+    text-align: right;
+}
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: #00d4ff; /* Neon techy blue */
+    color: white;
+    padding: 15px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #00b3e6; /* Slightly darker blue on hover */
+    transform: translateY(-5px); /* Lifts the button */
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4); /* Glowing blue shadow */
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+.signup-link a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
